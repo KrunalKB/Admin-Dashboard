@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+  
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Quantico&family=Satisfy&display=swap" rel="stylesheet">
+    <script src="signup.js"></script>
+  
+</head>
+<body>
+  <div class="center">
+    <div class="container">
+    <div class="text">
+        <h3>Add Food Category</h3></div>
+        <br>
+        <div id="error_message"></div>
+    <form action="food_category.php" method="POST" onsubmit="return validation()">
+
+          <div class="data">
+            <label>Food Category</label>
+            <input type="text" id="name" name="food_category" required><br>
+              <?php if(isset($name_error)) { ?>
+              <p><?php echo $name_error ?></p>
+              <?php } ?>
+          </div>
+
+          <div class="data">
+            <label>Food Link</label>
+            <input type="text" id="link" name="food_link" required><br>
+              <?php if(isset($email_error)) { ?>
+              <p><?php echo $email_error ?></p>
+              <?php } ?>
+          </div>
+
+          <br>
+
+          <div class="btn">
+            <div class="inner">
+          </div>
+          <button type="submit" name="submit">Add</button>
+          </div>
+  
+</form>
+</div>
+</div>
+
+</body>
+</html>
